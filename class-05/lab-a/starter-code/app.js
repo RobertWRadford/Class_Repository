@@ -79,10 +79,10 @@ function sumArray(sumArr) { //eslint-disable-line
 	var a = 0;
 	var numString = '';
 	for (var i = 0; i < sumArr.length-1; i++){
-		a = sum(sumArr[i], a);
+		a = sum(sumArr[i], a)[0];
 		numString += sumArr[i] + ',';
 	}
-	a = sum(sumArr[sumArr.length-1], a);
+	a = sum(sumArr[sumArr.length-1], a)[0];
 	numString += sumArr[sumArr.length-1] + ' was passed in as an array of numbers, and ' + a + ' is their sum.';
 	return([a, numString]);
 }
@@ -108,10 +108,10 @@ function multiplyArray(multArr) { //eslint-disable-line
 	var a = multArr[0];
 	var numString = 'The numbers ' + multArr[0] + ',';
 	for (var i = 1; i < multArr.length-1; i++){
-		a = multiply(multArr[i], a);
+		a = multiply(multArr[i], a)[0];
 		numString += multArr[i] + ',';
 	}
-	a = multiply(multArr[multArr.length-1], a);
+	a = multiply(multArr[multArr.length-1], a)[0];
 	numString += multArr[multArr.length-1] + ' have a product of ' + a + '.';
 	return([a, numString]);
 }
@@ -144,10 +144,10 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 	var a = dynamicArray[0];
 	var numString = 'The numbers ' + dynamicArray[0] + ',';
 	for (var i = 1; i < dynamicArray.length-1; i++){
-		a = multiply(dynamicArray[i], a);
+		a = multiply(dynamicArray[i], a)[0];
 		numString += dynamicArray[i] + ',';
 	}
-	a = multiply(dynamicArray[dynamicArray.length-1], a);
+	a = multiply(dynamicArray[dynamicArray.length-1], a)[0];
 	numString += dynamicArray[dynamicArray.length-1] + ' have a product of ' + a + '.';
 	return([a, numString]);
 }
