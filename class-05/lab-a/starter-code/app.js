@@ -77,12 +77,13 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 	var a = 0;
-	for (var i = 0; i < summArr.length-1; i++){
-		a = sum(summArr[i], a);
-		var numString += summArr[i] + ',';
+	var numString = '';
+	for (var i = 0; i < sumArr.length-1; i++){
+		a = sum(sumArr[i], a);
+		numString += sumArr[i] + ',';
 	}
-	a = sum(summArr[summArr.length-1], a);
-	numString += summArr[summArr.length-1] + ' was passed in as an array of numbers, and ' + a + ' is their sum.';
+	a = sum(sumArr[sumArr.length-1], a);
+	numString += sumArr[sumArr.length-1] + ' was passed in as an array of numbers, and ' + a + ' is their sum.';
 	return([a, numString]);
 }
 
